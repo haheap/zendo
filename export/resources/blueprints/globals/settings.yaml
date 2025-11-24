@@ -1,0 +1,50 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Header
+        fields:
+          -
+            handle: logo
+            field:
+              max_files: 1
+              container: assets
+              folder: brand
+              restrict: true
+              type: assets
+              display: Logo
+          -
+            handle: hero_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Hero Image'
+          -
+            handle: cta_text
+            field:
+              type: text
+              display: 'CTA Text'
+          -
+            handle: cta_link
+            field:
+              collections:
+                - pages
+              type: entries
+              display: 'CTA link'
+              max_items: 1
+              mode: select
+      -
+        display: Footer
+        fields:
+          -
+            handle: tagline
+            field:
+              type: text
+              display: Tagline
+          -
+            handle: copyright
+            field:
+              type: text
+              display: Copyright

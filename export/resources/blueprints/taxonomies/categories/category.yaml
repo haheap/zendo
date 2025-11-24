@@ -1,0 +1,43 @@
+title: Category
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+              localizable: true
+          -
+            handle: feature_image
+            field:
+              max_files: 1
+              container: assets
+              show_filename: false
+              type: assets
+              display: 'Feature image'
+              instructions: 'Every entry has a feature image. If no image is selected on the entry, the feature image from the category will be shown instead.'
+              instructions_position: below
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              required: true
+              validate:
+                - required
+                - 'max:200'

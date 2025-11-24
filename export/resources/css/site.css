@@ -1,0 +1,14 @@
+@import url(https://fonts.bunny.net/css?family=manrope:200,300,400,500,600,700,800);
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../views";
+@source "../../content";
+
+@theme{
+    --font-sans: "Manrope", sans-serif;
+    --color-accent: #f5f5f5;
+    --color-primary: #14B8A6;
+    --color-body: var(--color-slate-900);
+}
+
+[x-cloak] { display: none !important; }

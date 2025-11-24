@@ -1,0 +1,17 @@
+{{ if feature_image }}
+    {{  feature = feature_image }}
+{{  elseif categories:0:feature_image }}
+    {{ feature = categories:0:feature_image }}
+{{ /if }}
+
+{{ partial:block }}
+<div class="w-full">
+    <div class="text-6xl font-bold py-4">
+        {{ title }}
+    </div>
+{{ page_builder }}
+{{ partial src="page_builder/{type}" }}
+FEATURE: {{  feature }}
+{{ /page_builder }}
+    {{  /partial:block }}
+</div>

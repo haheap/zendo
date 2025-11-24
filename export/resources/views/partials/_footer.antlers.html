@@ -1,0 +1,43 @@
+{{ partial:block }}
+<footer aria-labelledby="footer-heading">
+    <h2 class="sr-only" id="footer-heading">Footer</h2>
+
+<div class="py-12 w-full ">
+<div class="xl:grid xl:grid-cols-3 xl:gap-8">
+    <div class="xl:col-span-1 uppercase">
+        {{ partial:partials.logo }}
+        <p class="text-base font-semibold text-body/80">
+            Webudvikling og design
+        </p>
+    </div>
+<div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+    <div class="md:grid md:grid-cols-2 md:gap-8">
+        <div>
+            <h3 class="uppercase tracking-wider font-semibold">
+                Løsninger
+            </h3>
+            <ul class="mt-4 space-y-4" role="list">
+                {{ nav:main }}
+                    <li><a class="uppercase text-sm font-semibold" href="{{ url }}">{{ title }}</a></li>
+                {{ /nav:main }}
+            </ul>
+        </div>
+        <div>
+            <h3 class="uppercase tracking-wider font-semibold">
+                Support
+            </h3>
+            <ul class="mt-4 space-y-4" role="list">
+                <li><a class="uppercase text-sm font-semibold" href="#">Log ind</a></li>
+                <li><a class="uppercase text-sm font-semibold" href="#">FAQ</a></li>
+                <li><a class="uppercase text-sm font-semibold" href="#">Mailopsætning</a></li>
+                <li><a class="uppercase text-sm font-semibold" href="#">Serverstatus</a></li>
+
+            </ul>
+        </div>
+    </div>
+{{ partial:partials.footer.newsletter }}
+    </div>
+    </div>
+    </div>
+    </footer>
+{{ /partial:block }}

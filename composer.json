@@ -1,0 +1,24 @@
+{
+    "name": "haheap/zendo",
+    "extra": {
+        "statamic": {
+            "name": "Zendo",
+            "description": "A simple and clean starter kit for blogs"
+        },
+        "laravel": {
+            "providers": [
+                "Haheap\\Zendo\\ServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Haheap\\Zendo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    }
+}

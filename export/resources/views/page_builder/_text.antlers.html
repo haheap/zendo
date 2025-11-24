@@ -1,0 +1,11 @@
+{{ partial:block}}
+    <div class="max-w-4xl mx-auto">
+    {{ content }}
+    {{ if type === 'text' }}
+        {{ partial:partials.prose :content="text" }}
+    {{ else }}
+        {{ partial src="sets/{type}" }}
+    {{ /if }}
+    {{ /content }}
+    </div>
+{{ /partial:block }}
