@@ -1,0 +1,53 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: 'Page builder'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            text:
+              display: Text
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  handle: content
+                  field: common.content
+            feature:
+              display: Feature
+              icon: alert-warning-exclamation-mark
+              fields: {  }
+            hero:
+              display: Hero
+              icon: favorite-star
+              fields:
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: cta_text
+                  field:
+                    type: text
+                    display: 'CTA Text'
+                -
+                  handle: cta_link
+                  field:
+                    type: entries
+                    display: 'CTA Link'
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text
