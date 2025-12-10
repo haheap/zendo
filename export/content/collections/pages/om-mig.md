@@ -5,7 +5,7 @@ title: 'Om Detailservice'
 author: e4250bcc-5ff2-4e15-bbf4-0dd57e002238
 template: default
 updated_by: e4250bcc-5ff2-4e15-bbf4-0dd57e002238
-updated_at: 1763200918
+updated_at: 1765272310
 page_builder:
   -
     id: mi03ce2g
@@ -91,7 +91,7 @@ page_builder:
   -
     id: mi044mqn
     type: feature
-    enabled: true
+    enabled: false
   -
     id: mi044qhx
     content:
@@ -115,4 +115,5 @@ page_builder:
             text: 'Jeg kan hjælpe med hosting, hvis du ønsker det - men det er ikke et krav. Når jeg hoster, sørger jeg også for at overvåge serveren, så vi straks opdager hvis der skulle opstå problemer på din hjemmeside.'
     type: text
     enabled: true
+meta_description: 'Jeg hjælper virksomheder, bureauer og selvstændige med at få deres hjemmeside til at fungere optimalt. Som freelance webmaster kan jeg træde til præcis når du har behovet, uden lange bindingsperioder eller dyre løbende aftaler.'
 ---

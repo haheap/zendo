@@ -1,0 +1,30 @@
+{{ partial:block }}
+    {{ form:contact }}
+        {{ if success }}
+            <div class="bg-green-300 p-2 text-white">
+                {{ success }}
+            </div>
+        {{ else }}
+            <form class="mx-auto max-w-5xl bg-accent">
+                {{ if errors }}
+                    <div class="bg-red-300 p-2 text-white">
+                        {{ errors }}
+                            {{ value }}
+                            <br />
+                        {{ /errors }}
+                    </div>
+                {{ /if }}
+                {{ fields }}
+                    <div class="mb-5 flex flex-col">
+                        {{ field }}
+                    </div>
+                    {{ if error }}
+                        <p class="text-gray-500">{{ error }}</p>
+                    {{ /if }}
+                {{ /fields }}
+                <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}" />
+                {{ partial:partials.button text="Send" }}
+            </form>
+        {{ /if }}
+    {{ /form:contact }}
+{{ /partial:block }}

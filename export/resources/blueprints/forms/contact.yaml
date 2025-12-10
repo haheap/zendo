@@ -1,0 +1,41 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: navn
+            field:
+              placeholder: Navn
+              character_limit: 120
+              autocomplete: name
+              type: text
+              display: Navn
+              validate:
+                - required
+          -
+            handle: e_mail
+            field:
+              autocomplete: email
+              type: text
+              display: 'E-mail adresse'
+              validate:
+                - required
+                - email
+          -
+            handle: phone
+            field:
+              placeholder: '## ## ## ##'
+              character_limit: 15
+              autocomplete: tel
+              type: text
+              display: Telefonnummer
+          -
+            handle: message
+            field:
+              placeholder: 'Din besked'
+              type: textarea
+              display: 'Hvad kan jeg hjælpe med?'
+              validate:
+                - required

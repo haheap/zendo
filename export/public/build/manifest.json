@@ -1,8 +1,9 @@
 {
   "resources/css/site.css": {
-    "file": "assets/site-zyeYI6w6.css",
+    "file": "assets/site-D1rHh7LB.css",
     "src": "resources/css/site.css",
     "isEntry": true,
+    "name": "site",
     "names": [
       "site.css"
     ]

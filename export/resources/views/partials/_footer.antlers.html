@@ -1,43 +1,37 @@
 {{ partial:block }}
-<footer aria-labelledby="footer-heading">
-    <h2 class="sr-only" id="footer-heading">Footer</h2>
+    <footer aria-labelledby="footer-heading" class="mt-16">
+        <h2 class="sr-only" id="footer-heading">Footer</h2>
 
-<div class="py-12 w-full ">
-<div class="xl:grid xl:grid-cols-3 xl:gap-8">
-    <div class="xl:col-span-1 uppercase">
-        {{ partial:partials.logo }}
-        <p class="text-base font-semibold text-body/80">
-            Webudvikling og design
-        </p>
-    </div>
-<div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
-    <div class="md:grid md:grid-cols-2 md:gap-8">
-        <div>
-            <h3 class="uppercase tracking-wider font-semibold">
-                Løsninger
-            </h3>
-            <ul class="mt-4 space-y-4" role="list">
-                {{ nav:main }}
-                    <li><a class="uppercase text-sm font-semibold" href="{{ url }}">{{ title }}</a></li>
-                {{ /nav:main }}
-            </ul>
+        <div class="w-full py-12">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="uppercase xl:col-span-1">
+                    {{ partial:partials.logo }}
+                    <p class="text-base font-semibold text-body/80">Webudvikling og design</p>
+                    <p class="text-base font-semibold text-body/80">+45 42 48 56 00</p>
+                </div>
+<!--                <div class="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="font-semibold tracking-wider uppercase">Løsninger</h3>
+                            <ul class="mt-4 space-y-4" role="list">
+                                {{ nav:main }}
+                                    <li><a class="text-sm font-semibold uppercase" href="{{ url }}">{{ title }}</a></li>
+                                {{ /nav:main }}
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold tracking-wider uppercase">Support</h3>
+                            <ul class="mt-4 space-y-4" role="list">
+                                <li><a class="text-sm font-semibold uppercase" href="#">Log ind</a></li>
+                                <li><a class="text-sm font-semibold uppercase" href="#">FAQ</a></li>
+                                <li><a class="text-sm font-semibold uppercase" href="#">Mailopsætning</a></li>
+                                <li><a class="text-sm font-semibold uppercase" href="#">Serverstatus</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {{ partial:partials.footer.newsletter }}-->
+                </div>
+            </div>
         </div>
-        <div>
-            <h3 class="uppercase tracking-wider font-semibold">
-                Support
-            </h3>
-            <ul class="mt-4 space-y-4" role="list">
-                <li><a class="uppercase text-sm font-semibold" href="#">Log ind</a></li>
-                <li><a class="uppercase text-sm font-semibold" href="#">FAQ</a></li>
-                <li><a class="uppercase text-sm font-semibold" href="#">Mailopsætning</a></li>
-                <li><a class="uppercase text-sm font-semibold" href="#">Serverstatus</a></li>
-
-            </ul>
-        </div>
-    </div>
-{{ partial:partials.footer.newsletter }}
-    </div>
-    </div>
-    </div>
     </footer>
 {{ /partial:block }}

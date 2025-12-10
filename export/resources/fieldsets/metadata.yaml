@@ -1,0 +1,19 @@
+title: Metadata
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: description
+    field:
+      type: text
+      display: Description
+  -
+    handle: og_image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: 'OG Image'

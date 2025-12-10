@@ -1,19 +1,18 @@
-{{ partial:block }}
-<div class="lg:flex lg:justify-between w-full">
-    <div class="w-full lg:w-1/2">
-        <img src="{{ image }}" class="object-cover">
-    </div>
-    <div class="w-full lg:w-1/2 flex flex-col space-y-4 items-left py-4 lg:py-8  lg:mb-12 lg:px-8">
-        <div class="text-5xl font-extrabold">
-            {{ heading }}
+{{ partial:block class="pb-8" }}
+    <div class="w-full lg:flex lg:justify-between">
+        <div class="w-full lg:w-1/2">
+            <img src="{{ image }}" class="object-cover" />
         </div>
-        <div class="text-xl font-semibold">
-            {{ text }}
-            
+        <div class="items-left flex w-full flex-col space-y-4 py-4 lg:mb-12 lg:w-1/2 lg:px-8 lg:py-8">
+            <div class="text-5xl font-extrabold">
+                {{ heading }}
+            </div>
+            <div class="text-xl font-semibold">
+                {{ text }}
+            </div>
+            <div>
+                {{ partial:partials.button :text="cta_text" :url="cta_link.0.url" }}
+            </div>
         </div>
-        <div>
-{{ partial:partials.button :text="cta_text" :url="cta_link.0.url" }}
     </div>
-    </div>
-        </div>
 {{ /partial:block }}

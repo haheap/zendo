@@ -20,6 +20,10 @@ fields:
               display: Feature
               icon: alert-warning-exclamation-mark
               fields: {  }
+            form:
+              display: form
+              icon: alert-warning-exclamation-mark
+              fields: { }
             hero:
               display: Hero
               icon: favorite-star

@@ -1,47 +1,62 @@
-<header x-data="{open: false}" class="bg-white text-slate-900 relative overflow-hidden pt-4 pb-16">
-    {{ partial:block class="bg-white flex flex-col sm:flex-row" }}
-        <div class="flex items-center justify-between w-full">
+<header x-data="{open: false}" class="relative overflow-hidden bg-neutral-100 pt-4 pb-16 text-neutral-800">
+    {{ partial:block class="flex flex-col sm:flex-row" }}
+        <div class="flex w-full items-center justify-between">
             <div>
                 {{ partial:partials.logo }}
             </div>
             <nav>
-            <!-- Icons -->
-            <div class="text-right sm:hidden items-end">
-                <button @click="open = !open">
-                    <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 justify-items-end ">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
+                <!-- Icons -->
+                <div class="items-end text-right sm:hidden">
+                    <button @click="open = !open">
+                        <svg
+                            x-show="!open"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 justify-items-end"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
 
-                    <svg x-cloak x-show="open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 justify-items-end">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
+                        <svg
+                            x-cloak
+                            x-show="open"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-6 justify-items-end"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
 
-            <!-- Desktop -->
-            <ul class="hidden sm:flex gap-x-4">
-                    <li><a class="text-base font-bold" href="#"></a></li>
-                {{ nav:main }}
-                    <li><a class="text-base font-bold" href="{{ url }}">{{ title }}</a></li>
-                {{ /nav:main }}
-            </ul>
-
-
-        </nav>
-            </div>
-            <div x-cloak x-show="open" x-on:click.outside="open = false" class="shadow-xl px-6 py-4">
+                <!-- Desktop -->
+                <ul class="hidden items-center gap-x-4 sm:flex">
+                    {{ nav:main }}
+                        <li><a class="text-base font-semibold" href="{{ url }}">{{ title }}</a></li>
+                    {{ /nav:main }}
+                    <!--{{ partial:partials.button text="Kontakt" link="/kontakt" href="/kontakt" size="sm" color="primary-300" }}-->
+                </ul>
+            </nav>
+        </div>
+        <div x-cloak x-show="open" x-on:click.outside="open = false" class="px-6 py-4 shadow-xl">
             <!-- Mobile -->
-            <ul class="block sm:hidden space-y-4">
+            <ul class="block space-y-4 sm:hidden">
                 {{ nav:main }}
-                    <li><a class="text-base font-bold" href="{{ url }}">{{ title }}</a></li>
+                    <li><a class="text-base font-semibold" href="{{ url }}">{{ title }}</a></li>
                 {{ /nav:main }}
             </ul>
-            </div>
         </div>
     {{ /partial:block }}
     <!--<div class="absolute z-0 inset-0">
-                {{ glide:settings:hero_image }}
+
+        {{ glide:settings:hero_image }}
                     <img class="w-full h-full object-cover" src="{{ url }}" alt="" width="{{ width }}">
-                {{ /glide:settings:hero_image }}
+{{ /glide:settings:hero_image }}
             </div>-->
 </header>

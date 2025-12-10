@@ -1,2 +1,10 @@
-title: Contact
-honeypot: botpot
+afp_dw_protection: true
+afp_dw_noscript_location: hidden
+title: Kontakt
+honeypot: zip
+email:
+  -
+    id: miyi1e7e
+    to: hha@detailservice.dk
+    cc: hanshenrikappel@gmail.com
+    mailer: smtp
